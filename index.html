@@ -7,17 +7,19 @@
     <style>
         /* Grundlæggende styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
         header {
             background-color: #FF6A13; /* Orange farve */
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header .logo-container {
@@ -31,12 +33,14 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: bold;
         }
 
         header .intro-text {
-            margin: 10px 0;
             font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: lighter;
         }
 
         /* Container til spiludbydere */
@@ -44,7 +48,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2 udbydere pr. kolonne */
             gap: 30px;
-            padding: 20px;
+            padding: 30px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -53,36 +57,46 @@
         .provider {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .provider:hover {
+            transform: translateY(-10px);
         }
 
         .provider h2 {
-            color: #333;
-            font-size: 1.8em;
+            color: #FF6A13;
+            font-size: 2em;
+            margin: 10px 0;
         }
 
         .provider .provider-logo {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             margin: 20px 0;
+            object-fit: contain;
         }
 
         .provider p {
             color: #666;
             font-size: 1em;
+            margin-bottom: 15px;
         }
 
         .affiliate-link {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #FF6A13;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
         }
 
         .affiliate-link:hover {
@@ -94,10 +108,23 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .provider-container {
+                grid-template-columns: 1fr; /* 1 kolonne på mindre skærme */
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header .intro-text {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
