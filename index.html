@@ -4,7 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banditterne - Spiludbydere</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Grundlæggende styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #FF6A13; /* Orange farve */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header .logo-container {
+            margin-bottom: 20px;
+        }
+
+        header .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header .intro-text {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        /* Container til spiludbydere */
+        .provider-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 udbydere pr. kolonne */
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hver spiludbyder */
+        .provider {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .provider h2 {
+            color: #333;
+            font-size: 1.8em;
+        }
+
+        .provider .provider-logo {
+            width: 100px;
+            height: 100px;
+            margin: 20px 0;
+        }
+
+        .provider p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .affiliate-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #FF6A13;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .affiliate-link:hover {
+            background-color: #FF4500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
