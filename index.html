@@ -1,39 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banditterne - Link Hub</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banditterne - Spiludbydere</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #000; /* Sort baggrund */
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header .logo-container {
+      margin-bottom: 20px;
+    }
+
+    header .logo {
+      max-width: 200px;
+      height: auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    header .intro-text {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-weight: lighter;
+    }
+
+    .provider-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .provider {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .provider:hover {
+      transform: translateY(-8px);
+    }
+
+    .provider h2 {
+      color: #FF6A13;
+      font-size: 1.8em;
+      margin: 10px 0;
+    }
+
+    .provider-logo {
+      width: 120px;
+      height: 120px;
+      margin: 20px 0;
+      object-fit: contain;
+    }
+
+    .provider p {
+      color: #666;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    .affiliate-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #FF6A13;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+    }
+
+    .affiliate-link:hover {
+      background-color: #e65100;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .provider-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Banditterne Logo">
+    <div class="logo-container">
+      <img src="att.wYttlGzcyRX85huSyrRQuQRTb4kY_0MOqvIGw3mTnlY (1).jpg" alt="Banditterne Logo" class="logo" />
     </div>
-    <div class="intro">
-      <h1>Velkommen til Banditterne!</h1>
-      <p>Vi er din go-to link hub for de bedste spiludbydere. Hold øje med vores links og opdag spændende tilbud. Find snart vores affiliate links!</p>
-    </div>
+    <h1>Banditterne - Din link hub</h1>
+    <p class="intro-text">Find dine spiludbydere her. Vi samler det hele ét sted – med stil og et glimt i øjet.</p>
   </header>
 
-  <main>
-    <section class="providers">
-      <div class="provider">
-        <a href="#">
-          <img src="https://via.placeholder.com/150" alt="Spiludbyder 1">
-          <p>Spiludbyder 1</p>
-        </a>
-      </div>
-      <div class="provider">
-        <a href="#">
-          <img src="https://via.placeholder.com/150" alt="Spiludbyder 2">
-          <p>Spiludbyder 2</p>
-        </a>
-      </div>
-      <!-- Add more providers as needed -->
-    </section>
-  </main>
+  <div class="provider-container">
+    <div class="provider">
+      <h2>Spiludbyder 1</h2>
+      <img src="https://via.placeholder.com/150" alt="Logo" class="provider-logo">
+      <p>Kort beskrivelse af spiludbyderen.</p>
+      <a href="#" class="affiliate-link">Besøg Spiludbyder</a>
+    </div>
+
+    <div class="provider">
+      <h2>Spiludbyder 2</h2>
+      <img src="https://via.placeholder.com/150" alt="Logo" class="provider-logo">
+      <p>Kort beskrivelse af spiludbyderen.</p>
+      <a href="#" class="affiliate-link">Besøg Spiludbyder</a>
+    </div>
+
+    <!-- Tilføj flere spiludbydere her -->
+  </div>
 
   <footer>
     <p>&copy; 2025 Banditterne. Alle rettigheder forbeholdes.</p>
